@@ -1,0 +1,28 @@
+{
+	"name": "DataBricks_GP_Cluster",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Custom spark config",
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://eastus2.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "KeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricks-token"
+			},
+			"newClusterNodeType": "Standard_D4a_v4",
+			"newClusterSparkEnvVars": {
+				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+			},
+			"newClusterVersion": "7.3.x-scala2.12",
+			"newClusterInitScripts": [],
+			"newClusterNumOfWorker": "1:8",
+			"clusterOption": "Autoscaling"
+		}
+	}
+}

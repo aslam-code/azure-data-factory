@@ -1,0 +1,24 @@
+{
+	"name": "DataBlob",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"connectVia": {
+			"referenceName": "LinkedHostedIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		},
+		"description": "{'build_id': 'Manual/coredatahubdocker/20230515.9/2023-05-15 14:38:05+00:00', 'build_task': 'https://dev.azure.com/dh-platforms-devops/coredatahub-prod-01/launcher-dev/IaC DEV provisioning/AzureCLI', 'build_requestor': 'launcher.im@pg.com', 'build_source': 'provisioning/master/2aa0eede63a04036c03ad30329f3484091c8c0ea'}",
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"sasUri": "https://blobcdhlaunchpadoc31dv.blob.core.windows.net/data",
+			"sasToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"type": "LinkedServiceReference",
+					"referenceName": "KeyVault"
+				},
+				"secretName": "blob-rw-sas"
+			}
+		},
+		"annotations": []
+	}
+}

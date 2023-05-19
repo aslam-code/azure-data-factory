@@ -1,0 +1,9 @@
+{
+	"name": "adf-cdh-launchpad-oc-31dv",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2316836c-c4e0-4d8c-91be-c678a35b1e28",
+		"tenantId": "3596192b-fdf5-4e2c-a6fa-acb706c963d8"
+	}
+}

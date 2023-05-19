@@ -1,0 +1,12 @@
+{
+	"name": "LinkedHostedIntegrationRuntime",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/67e270e3-8e55-46e7-ac28-cf8efe883de1/resourceGroups/AZ-RG-CoreDataHub-IR-Vms-NonProd-02/providers/Microsoft.DataFactory/factories/adf-cdh-integration-runtime-05np/integrationruntimes/LinkedHostedIntegrationRuntimeNonProd",
+				"authorizationType": "Rbac"
+			}
+		}
+	}
+}
